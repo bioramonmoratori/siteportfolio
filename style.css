@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    
+}
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.containericone {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    height: auto; 
+    gap: 40px;
+}
+
+.containersobre {
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: center;
+    gap: 150px;
+    flex-wrap: wrap;
+}
+
+#davinci {
+    font: 15px 'Roboto', sans-serif;
+    color: #FFFFFF;
+}
+
+#textosobre {
+    font: 20px 'Roboto', sans-serif;
+    color: #FFFFFF;
+    text-align: justify;
+}
+
+#divtitulo {
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+#titulo {
+    font-size: 70px;
+    font-family: 'Roboto', sans-serif;
+    color: #00FF00;
+
+}
+
+#subtitulo {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+}
+
+#icone {
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+#eu{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+.btn {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    outline: none;
+    transition: 1s ease-in-out;
+  }
+  
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+  
+  .btn:hover {
+    transition: 1s ease-in-out;
+    background: #00FF00;
+  }
+  
+  .btn:hover svg {
+    stroke-dashoffset: -480;
+  }
+  
+  .btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+  }
+
+  /* BUTTON GLITCH */
+.button-glitch,
+.button-glitch:after {
+  width: 50px;
+  height: 56px;
+  line-height: 78px;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #00FF00 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #000000;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-glitch:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: '##%$^%$^#&&# #$^%&&^%$%#^&#(*$*';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00FF00 3%, #00FF00 5%, #00FF00 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+.button-glitch:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 68px) {
+  .button-glitch,
+  .button-glitch:after {
+    width: 100px;
+    height: 100px;
+    line-height: 88px;
+  }
+}
+
