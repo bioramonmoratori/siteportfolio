@@ -275,3 +275,31 @@ svg {
 .coin {
   animation: spin 15s infinite; /* Aumenta a duração da animação para 6 segundos */
 }
+
+/* Carrossel */
+.carousel {
+  position: relative;
+  width: 450px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  /* Remova o overflow: hidden; para que todos os slides sejam visíveis */
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Para garantir que as imagens preencham os slides */
+}
+
+
