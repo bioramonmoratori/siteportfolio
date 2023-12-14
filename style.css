@@ -80,29 +80,32 @@ body {
 
 #eu{
     width: 400px;
-    height: 400px;
+    height: 410px;
     border-radius: 50%;
 }
 .btn {
-    width: 180px;
-    height: 60px;
-    cursor: pointer;
-    background: transparent;
-    border: 1px solid #FFFFFF;
-    outline: none;
-    transition: 1s ease-in-out;
-  }
-  
-  svg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    fill: none;
-    stroke: #fff;
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
-  }
+  position: relative;
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #ffffff00;
+  outline: none;
+  transition: 1s ease-in-out;
+  overflow: hidden;
+}
+
+svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
   
   .btn:hover {
     transition: 1s ease-in-out;
@@ -114,6 +117,7 @@ body {
   }
   
   .btn span {
+    font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 18px;
     font-weight: 100;
